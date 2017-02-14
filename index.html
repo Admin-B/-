@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <title>사천성</title>
+      <meta charset="utf-8">
+      <style type="text/css">
+      body{
+        background:#0055A4;
+      }
+      canvas{
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-left:-300px;
+        margin-top:-250px;
+        background: #1B76CB;
+      }
+      </style>
+  </head>
+  <body>
+    <canvas id="canvas" width=600 height=500>not Support HTML5</canvas>
+    <script type="text/javascript">
+      var canvas=document.getElementById("canvas");
+      var ctx   =canvas.getContext('2d');
+      var map   =new Array();
+      var w=20,
+          h=10;
+      for(var y=0; y<h; y++){
+        map[y]=new Array();
+        for(var x=0; x<w; x++){
+          map[y][x]=0;
+        }
+      }
+      function random(n1,n2) {
+        return Math.floor( (Math.random() * (n2 - n1 + 1)) + n1 );
+      }
+    </script>
+    <script src="./js/Astar.js"></script>
+    <script src="./js/block.js"></script>
+    <script src="./js/logic.js"></script>
+  </body>
+</html>
